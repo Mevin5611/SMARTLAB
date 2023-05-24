@@ -1,0 +1,31 @@
+{% extends 'admin/Admin_index.html' %}
+{% block body %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="" method="get" >
+<table width="271" border="1" class="table table-secondary">
+  <tr>
+    <th width="66" height="39" scope="row">sl.no</th>
+    <td width="71">name</td>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <th height="37" scope="row">{{ loop.index }}</th>
+    <td>{{ i.department_name }}</td>
+    <td width="53"><a href="/edit_department/{{ i.dept_id }}#a" class="btn btn-primary">edit</a></td>
+    <td width="53"><a href="/delete_department/{{ i.dept_id }}#a" class="btn btn-danger">delete</a></td>
+  </tr>
+    {% endfor %}
+</table>
+
+
+</form>
+</body>
+</html>
+{% endblock %}

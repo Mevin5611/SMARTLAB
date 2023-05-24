@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/allo"
+            android:title="Allocated Labs" />
+
+        <item
+            android:id="@+id/nav_slide"
+            android:icon="@drawable/labsc"
+            android:title="lab scheduling"/>
+
+<!--        <item-->
+<!--            android:id="@+id/nav_slidee"-->
+<!--            android:icon="@drawable/ic_menu_slideshow"-->
+<!--            android:title="exam scheduling"/>-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_slidesh"-->
+<!--            android:icon="@drawable/ic_menu_slideshow"-->
+<!--            android:title="lab_monitoring"/>-->
+
+
+
+        <item
+            android:id="@+id/nav_slidesow"
+            android:icon="@drawable/ll"
+            android:title="view student attendence"/>
+        <item
+            android:id="@+id/nav_slidesho"
+            android:icon="@drawable/permi"
+            android:title="set application permisson"/>
+        <item
+            android:id="@+id/nav_slideshoo"
+            android:icon="@drawable/nn"
+            android:title="blocked apps"/>
+        <item
+            android:id="@+id/nav_slidehow"
+            android:icon="@drawable/exam"
+            android:title="lab exam system allocation"/>
+        <item
+            android:id="@+id/nav_slihow"
+            android:icon="@drawable/logout"
+            android:title="logout"/>
+
+
+    </group>
+</menu>

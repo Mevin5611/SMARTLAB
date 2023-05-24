@@ -1,0 +1,36 @@
+{% extends 'admin/Admin_index.html' %}
+{% block body %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="get" action=""><table width="357" border="1"class="table table-secondary">
+  <tr>
+    <th width="38" scope="row">sl.no</th>
+    <td width="41"><p>lab name</p></td>
+    <td width="58">room number</td>
+    <td width="30">&nbsp;</td>
+    <td width="48">&nbsp;</td>
+    <td width="34">&nbsp;</td>
+    <td width="62">&nbsp;</td>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <th scope="row">{{ loop.index }}&nbsp;</th>
+    <td>{{ i.lab_name }}&nbsp;</td>
+    <td>{{ i.room_no }}&nbsp;</td>
+    <td><a href="/editlab/{{ i.lab_id }}#a"class="btn btn-primary">edit</a></td>
+    <td><a href="/delete_lab/{{ i.lab_id }}#a"class="btn btn-danger">delete</a></td>
+    <td><a href="/addsubject/{{ i.lab_id }}#a"class="btn btn-primary">addsubject</a></td>
+    <td><a href="/viewsubject/{{ i.lab_id }}#a"class="btn btn-primary">view subject</a></td>
+  </tr>
+    {% endfor %}
+</table>
+
+</form>
+</body>
+</html>
+{% endblock %}

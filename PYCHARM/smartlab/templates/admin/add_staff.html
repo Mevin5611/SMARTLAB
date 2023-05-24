@@ -1,0 +1,91 @@
+{% extends 'admin/Admin_index.html' %}
+{% block body %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post"  action="" enctype="multipart/form-data">
+<table width="342" border="1" class="table table-secondary">
+
+  <tr>
+    <th scope="row">name</th>
+    <td>
+      <label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" class="form-control" required />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">gender</th>
+    <td>
+      <p>
+        <label>
+          <input type="radio" name="RadioGroup1" value="male" id="RadioGroup1_0" />
+          male
+        </label>
+        <br />
+        <label>
+          <input type="radio" name="RadioGroup1" value="female" id="RadioGroup1_1" required />
+          female</label>
+        <br />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">DOB</th>
+    <td>
+      <label for="textfield2"></label>
+      <input type="date" name="textfield2" id="textfield2" class="form-control" required />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">email</th>
+    <td>
+      <label for="textfield3"></label>
+      <input type="text" name="textfield3" id="textfield3" class="form-control" required />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">phone</th>
+    <td>
+      <label for="textfield4"></label>
+      <input type="text" name="textfield4" id="textfield4" class="form-control" required />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">image</th>
+    <td>
+      <label for="fileField"></label>
+      <input type="file" name="fileField" id="fileField" class="form-control" required />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">department</th>
+       <td>
+           <label>
+               <select name="select" >
+             {% for i in data %}
+             <option value="{{ i.dept_id }}">{{ i.department_name }}</option>
+             {% endfor %}
+             </select>
+           </label></td>
+  </tr>
+
+
+
+
+
+  <tr>
+    <td colspan="2" align="center" scope="row"><div align="center">
+
+        <input type="submit" name="button" id="button" value="ADD" class="btn btn-primary" /></div>
+    </td>
+  </tr>
+</table>
+</form>
+
+</body>
+</html>
+{% endblock %}
